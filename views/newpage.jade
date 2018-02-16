@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1 #{pass}
+  form 
+    table.table.table-striped.table-bordered
+        tr
+            td Skills
+            td Category
+        tr
+            td  
+            td
+      hr
+  form.well(action="/addskill", method="post")
+    label Item Skill:
+    input(name="skill", type="textbox")
+    label Item Category:
+    input(name="category", type="textbox")
+    label Item Test:
+    input(name="test", type="textbox")
+    br
+    button.btn(type="submit") Add item

@@ -38,6 +38,14 @@ taskDao.init();
 app.get('/', taskList.showTasks.bind(taskList));
 app.post('/addtask', taskList.addTask.bind(taskList));
 app.post('/completetask', taskList.completeTask.bind(taskList));
+
+//newpage route
+app.get('/newpage', (req, res)=>{
+  res.render('newpage', {pass: 'This is new page!'});
+});
+
+
+
 app.set('view engine', 'jade');
 
 // catch 404 and forward to error handler
